@@ -1,19 +1,3 @@
-package com.bada.badaback.global;
-
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
-import lombok.Getter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import java.time.LocalDateTime;
-
-@Getter
-@MappedSuperclass
-@EntityListeners(AuditingEntityListener.class)
-public class BaseTimeEntity {
-    @CreatedDate
-    private LocalDateTime createdAt;
-}
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b9f751fe50256a641e5c14bab7edda69788a8885af0df674c153a5959028eac
+size 472
