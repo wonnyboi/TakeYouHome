@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d297e6f2c516655bbcca448daa4e80d0ce3cc48e2160f9fac131e63b9355733
-size 516
+package com.bada.badaback.kafka.service;
+
+import com.bada.badaback.kafka.dto.AlarmDto;
+import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+@Service
+@Slf4j
+public class KafkaConsumer {
+
+  @KafkaListener(topics = "alarm-topic", groupId = "foo")
+  public void consume(AlarmDto alarmDto) throws IOException {
+    log.info("################## Consumed AlarmDto : {}", alarmDto.toString());
+  }
+
+
+}
